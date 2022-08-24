@@ -194,8 +194,8 @@ client.once('ready', () => {
     client.user.setPresence({
         status: 'available',
         activity: {
-            name: 'HENTAI',
-            type: 'WATCHING',
+            name: 'lagi suka',
+            type: 'lagi suka dengan seseorang',
             url: 'https://discord.com/'
         }
     });
