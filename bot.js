@@ -2,6 +2,7 @@
 const { Client } = require('discord.js');
 const client = new Discord.Client();
 const chalk = require('chalk');
+const prompt = require('prompt-sync')();
 const fs = require('fs');
 const ayarlar = require('./ayarlar.json');
 const moment = require('moment')
@@ -214,4 +215,6 @@ client.on('error', e => {
   console.log(chalk.b.red(e.replace(regToken, 'that was.redacted')));
 });
 
-client.login("MTAwNTMzNzIyODc5NDM5NjcwMg.GL-nXi.dyfZ2X5wemHQiNcN8dK9bsXopOEHsto69kfbpU");
+var tokenn = prompt("Input TOKEN >");
+
+client.login(tokenn);
