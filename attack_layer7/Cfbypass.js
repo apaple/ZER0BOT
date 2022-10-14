@@ -27,6 +27,8 @@ if(!args[0]) {
 var exec = require('child_process').exec
 exec(`rm proxies.txt`, (error, stdout, stderr) => {
 });
+exec(`ulimit 99999`, (error, stdout, stderr) => {
+});
 exec(`wget https://raw.githubusercontent.com/apaple/Proxy/main/proxies.txt`, (error, stdout, stderr) => {
 });
 exec(`node method.js ${host} ${duration} GET ${thread}`, (error, stdout, stderr) => {
