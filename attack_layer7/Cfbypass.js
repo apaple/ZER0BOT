@@ -74,12 +74,12 @@ const embed = new Discord.MessageEmbed()
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['http'],
+  aliases: ['cf'],
   permLevel: 0
 }
 
 exports.help = {
-  name: 'http',
+  name: 'cf',
   description: 'yukai',
-  usage: 'http'
+  usage: 'cf'
 }
